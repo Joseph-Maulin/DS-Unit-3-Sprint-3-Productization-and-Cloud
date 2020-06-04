@@ -2,6 +2,7 @@ from flask import Flask
 import threading, webbrowser
 
 from web_app.routes.home_routes import home_routes
+from web_app.routes.twitter_routes import twitter_routes
 from web_app.Twitter import db, migrate
 
 # DATABASE_URI = "sqlite:///C:\Users\Joe.Maulin\Desktop\DS-Unit-3-Sprint-3-Productization-and-Cloud\module1-web-application-development-with-flask\web_app\twitter.db"
@@ -15,6 +16,8 @@ def create_app():
     migrate.init_app(app, db)
 
     app.register_blueprint(home_routes)
+    app.register_blueprint(twitter_routes)
+
 
     return app
 

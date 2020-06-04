@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="keywords" content="Twitter Test"/>
+  <meta name="author" content="Joseph Maulin"/>
+  <meta name="description" content="Twitter Test"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"/> -->
+
+  <title>Tweet</title>
+</head>
+
+<body>
+  <h1>Enter a tweet</h1>
+
+  <form action="/tweet/create" method="POST">
+
+    <label>User:</label>
+    <input type="text" name="user" required>
+
+    <br/>
+    <label>Tweet:</label>
+    <textarea name="tweet" rows="4" cols="50" placeholder="Tweet here" required></textarea>
+
+    <br/>
+    <input type="submit">
+  </form>
+
+</body>
+
+</html>
